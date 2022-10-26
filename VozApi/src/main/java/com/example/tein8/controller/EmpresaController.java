@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.tein8.model.Empresa;
-import com.example.tein8.service.VozService;
+import com.example.tein8.service.EmpresaService;
 
 
 @RestController

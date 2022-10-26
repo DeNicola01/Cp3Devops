@@ -1,27 +1,32 @@
 package com.example.tein8.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-public class Voz {
+@Table(name="TB_EMPRESA")
+public class Empresa {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id 
+    @Column(name= "cd_empresa")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank @Column(name= "Nome")
+    @NotBlank @Column(name= "nm_empresa")
     private String nome;
 
-    @Column(name= "CNPJ")
+    @Column(name= "ds_cnpj")
     private String cnpj;
 
-    @Column(name= "Descricao")
+    @Column(name= "ds_empresa")
     private String descricao;
 
-    @Column(name= "Data Cadastro")
+    @Column(name= "dt_cadastro")
     private String data;
 
      public Empresa() {
